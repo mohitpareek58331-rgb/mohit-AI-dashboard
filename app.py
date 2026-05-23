@@ -33,5 +33,6 @@ def chat():
         print(f"Backend Error: {e}")
         return jsonify({"reply": "I ran into an issue connecting to my brain."}), 500
 
+# 4. Correctly indented startup block
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

@@ -5,7 +5,15 @@ from google import genai
 app = Flask(__name__)
 
 # Initialize the Gemini Client
-client = genai.Client(api_key="AIzaSyDEPzlnWFrymdpvDtgorBcZ43YUxz3JhPw")
+import os
+from flask import Flask, render_template, request, jsonify
+from google import genai
+
+app = Flask(__name__)
+
+# This securely grabs the key you just saved on Render's servers!
+api_key_secret = os.environ.get("GEMINI_API_KEY")
+client = genai.Client(api_key=api_key_secret)
 
 @app.route('/')
 def home():

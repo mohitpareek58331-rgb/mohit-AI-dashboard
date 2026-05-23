@@ -1,20 +1,15 @@
-from flask import Flask, render_template, request, jsonify
-from google import genai
-
-# Flask automatically checks the 'templates' and 'static' folders by default
-app = Flask(__name__)
-
-# Initialize the Gemini Client
 import os
 from flask import Flask, render_template, request, jsonify
 from google import genai
 
+# 1. Initialize your Flask application
 app = Flask(__name__)
 
-# This securely grabs the key you just saved on Render's servers!
+# 2. Grab your secret API key from Render's environment settings
 api_key_secret = os.environ.get("GEMINI_API_KEY")
 client = genai.Client(api_key=api_key_secret)
 
+# 3. Define your routes
 @app.route('/')
 def home():
     return render_template('index.html')

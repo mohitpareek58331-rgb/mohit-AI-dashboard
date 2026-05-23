@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit's AI Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <header class="main-header">
+            <h1>Mohit's AI Dashboard</h1>
+            <p>Track your goals. Talk to your AI assistant.</p>
+        </header>
+
+        <div class="dashboard-grid">
+            
+            <section class="card habit-card">
+                <h2>Habit Tracker</h2>
+                <ul class="habit-list">
+                    <li><input type="checkbox"> 🏋️‍♂️ Fitness & Gym Workout</li>
+                    <li><input type="checkbox"> 💻 Code Python / Web Apps</li>
+                    <li><input type="checkbox"> 📚 Academic Studies</li>
+                </ul>
+            </section>
+
+            <section class="card chat-card">
+                <h2>AI Assistant</h2>
+                <div class="chat-box" id="chatBox">
+                    <p class="bot-msg"><strong>AI:</strong> Hello Mohit! Ready to crush your goals today?</p>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" placeholder="Ask your AI something..." id="userInput">
+                    <button>Send</button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
